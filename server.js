@@ -1,10 +1,9 @@
-const app =  require("./index");
-const connect =  require("./configs/db");
-const port = 3008
-app.listen(port,async()=>{
+const app = require("./index");
+const connect = require("./configs/db");
+app.listen("3008", async () => {
     try {
         await connect();
-        console.log("listening on port 3008")
+        console.log("listening port 3008")
     } catch (error) {
         console.error(error.message)
     }
